@@ -17,16 +17,7 @@ workflows:
       flutter:
         version: fvm
     scripts:
-      - name: Show PROJECT_BUILD_NUMBER
-        script: |
-          echo $PROJECT_BUILD_NUMBER
-      - name: Show FLUTTER_BUILD_NAME
-        script: |
-          echo $FLUTTER_BUILD_NAME
-      - name: Show FLUTTER_BUILD_NUMBER
-        script: |
-          echo $FLUTTER_BUILD_NUMBER
       - name: Get APPVERSION
         script: |
-          VERSION_NAME=$(grep 'version:' ./pubspec.yaml | sed 's/version: //') \
-          echo $VERSION_NAME
+          APP_VERSION=$(grep 'version:' pubspec.yaml | awk '{print $2}')
+          echo $APP_VERSION
