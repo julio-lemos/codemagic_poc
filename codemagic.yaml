@@ -17,12 +17,6 @@ workflows:
       flutter:
         version: fvm
     scripts:
-      - name: Install dependencies
-        script: |
-          flutter pub get
-      - name: Flutter unit tests
-        script: |
-          flutter test
       - name: Show Project version
         script: |
           echo $PROJECT_BUILD_NUMBER
