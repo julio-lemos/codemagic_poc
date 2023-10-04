@@ -17,8 +17,12 @@ workflows:
       flutter:
         version: fvm
     scripts:
-      - name: Show Project version
+      - name: Show PROJECT_BUILD_NUMBER
         script: |
-          echo $PROJECT_BUILD_NUMBER \
-          echo $FLUTTER_BUILD_NAME \ 
+          echo $PROJECT_BUILD_NUMBER
+      - name: Show FLUTTER_BUILD_NAME
+        script: |
+          echo $FLUTTER_BUILD_NAME
+      - name: Show FLUTTER_BUILD_NUMBER
+        script: |
           echo $FLUTTER_BUILD_NUMBER
