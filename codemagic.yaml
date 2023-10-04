@@ -26,3 +26,7 @@ workflows:
       - name: Show FLUTTER_BUILD_NUMBER
         script: |
           echo $FLUTTER_BUILD_NUMBER
+      - name: Get APPVERSION
+        script: |
+          VERSION_NAME=$(grep 'version:' ./pubspec.yaml | sed 's/version: //') \
+          echo $VERSION_NAME
