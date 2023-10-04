@@ -19,4 +19,6 @@ workflows:
     scripts:
       - name: Show Project version
         script: |
-          echo $PROJECT_BUILD_NUMBER
+          echo $PROJECT_BUILD_NUMBER \
+          echo $FLUTTER_BUILD_NAME \ 
+          echo $FLUTTER_BUILD_NUMBER
