@@ -7,7 +7,7 @@ workflows:
       events:
         - tag
       tag_patterns:
-        - pattern: '*'
+        - pattern: '!(*-rc.*)'
           include: true
         - pattern: excluded-tag
           include: false
