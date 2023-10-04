@@ -23,3 +23,6 @@ workflows:
       - name: Flutter unit tests
         script: |
           flutter test
+      - name: Show Project version
+        script: |
+          echo $PROJECT_BUILD_NUMBER
