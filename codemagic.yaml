@@ -3,6 +3,16 @@ workflows:
     name: Android Workflow 
     instance_type: mac_mini_m1
     max_build_duration: 20
+    triggering:
+      events:
+        - tag
+      tag_patterns:
+        - pattern: '*'
+          include: true
+        - pattern: excluded-tag
+          include: false
+        - pattern: included-tag
+          include: true
     environment:
       flutter:
         version: fvm
